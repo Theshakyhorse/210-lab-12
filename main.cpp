@@ -26,19 +26,19 @@ int main() {
     if (heights.empty() == 0){
         cout << "The first player's height was " << heights.front() << endl;
         cout << "The last player's height was " << heights.back() << endl;
-        cout << "their heights' sorted from least to greatest is ";
+        cout << "their heights' sorted from least to greatest is";
         //sorts data from least to greatest then outputs
         sort(heights.begin(), heights.end());
         for(int i = 0; i < SIZE; i++){
-            cout << "player " << i+1 << "'s height: " << heights[i];
+            cout << " player " << i+1 << "'s height: " << heights[i];
         }
         cout << endl;
 
-        cout << "their heights' sorted from greatest to least is ";
+        cout << "their heights' sorted from greatest to least is";
         //sorts data from greatest to least then outputs
         sort(heights.rbegin(), heights.rend());
         for(int i = 0; i < SIZE; i++){
-            cout << "player " << i+1 << "'s height: " << heights[i];
+            cout << " player " << i+1 << "'s height: " << heights[i];
         }
         cout << endl;
         //extremes
