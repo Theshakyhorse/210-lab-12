@@ -17,7 +17,7 @@ int main() {
     cout << "For example, entering 6 or 6.0 = the player is 6 ft tall" << endl;
     //reads data to get player heights
     for(int i = 0; i < SIZE; i++) {
-        cout << "player " << i+1 << endl;
+        cout << "player " << i+1 << " : " << endl;
         cin >> heights[i];
     }
 
