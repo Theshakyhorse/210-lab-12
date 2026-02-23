@@ -12,7 +12,7 @@ int main() {
     array<double, SIZE> heights;
     cout << "There are " << SIZE << "people on this team" << endl;
     cout << "please enter the heights for the players" << endl; 
-    cout << "For example 6 or 6.0 means the player is 6 feet tall " << endl;
+    cout << "For example, entering 6 or 6.0 = the player is 6 ft tall" << endl;
     for(int i = 0; i < SIZE; i++) {
         cout << "player " << i+1 << endl;
         cin >> heights[i];
@@ -21,8 +21,24 @@ int main() {
     if (heights.empty() == 0){
         cout << "Your first input was " << heights.front() << endl;
         cout << "Your last input was " << heights.back() << endl;
+        cout << "their heights' sorted from least to greatest is ";
+        sort(heights.begin(), heights.end());
+        for(int i = 0; i < SIZE; i++){
+            cout << "player " << i+1 << "'s height: " << heights[i];
+        }
+        cout << endl;
+        cout << "their heights' sorted from greatest to least is ";
+        sort(heights.rbegin(), heights.rend());
+        for(int i = 0; i < SIZE; i++){
+            cout << "player " << i+1 << "'s height: " << heights[i];
+        }
+        cout << endl;
+        cout << "shortest height: " << *min_element(heights.begin(), heights.end()) << endl;
     }
-    else{}
+    else{
+        cout << "you entered nothing";
+    }
 
+    
     return 0;
 }
